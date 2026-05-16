@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/raw_assets/Lambda%20Marketing%20Website/122/js_client_assets/assets/BackgroundAnimation-CxDQleZ9.js\")",
+      "Bash(grep -o \"https://[^\\\\\"'\\\\`]*unicorn[^\\\\\"'\\\\`]*\")",
+      "Bash(curl *)",
+      "Bash(npx tsc *)",
+      "Bash(dir node_modules\\\\.bin\\\\tsc*)",
+      "Bash(cmd *)",
+      "Bash(npm install *)"
+    ]
+  }
+}
