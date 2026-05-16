@@ -1,0 +1,293 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Lambda.ai — @font-face (HubSpot CDN, font-display: swap)
+   ============================================================ */
+
+@font-face {
+  font-display: swap;
+  font-family: "Suisse Intl Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntlMono-Regular.woff2") format("woff2"),
+       url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntlMono-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Suisse Intl Mono";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntlMono-Bold.woff2") format("woff2"),
+       url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntlMono-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-Light.woff2") format("woff2"),
+       url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-Light.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-Regular.woff2") format("woff2"),
+       url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Suisse Intl";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-Italic.woff2") format("woff2"),
+       url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-SemiBold.woff2") format("woff2"),
+       url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Suisse Intl";
+  font-style: italic;
+  font-weight: 600;
+  src: url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-SemiBoldItalic.woff2") format("woff2"),
+       url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-SemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-Bold.woff2") format("woff2"),
+       url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/SuisseIntl-Bold.woff") format("woff");
+}
+
+@font-face {
+  ascent-override: 92%;
+  descent-override: 22%;
+  font-display: swap;
+  font-family: apkarchivr21;
+  font-style: normal;
+  font-weight: 400;
+  line-gap-override: 0%;
+  src: url("https://21998649.fs1.hubspotusercontent-na1.net/hubfs/21998649/web-static/fonts/apkarchivr21_regular-webfont.woff") format("woff");
+}
+
+/* ============================================================
+   Tailwind v4 — override font-sans and font-mono utilities
+   ============================================================ */
+
+@theme {
+  --font-sans: "Suisse Intl", Helvetica, Arial, sans-serif;
+  --font-mono: "Suisse Intl Mono", "Courier New", monospace;
+}
+
+/* ============================================================
+   :root — Lambda CSS custom properties
+   ============================================================ */
+
+:root {
+  /* Neutral scale */
+  --color-neutral-1000: #000000;
+  --color-neutral-900:  #0b0b0b;
+  --color-neutral-800:  #262625;
+  --color-neutral-800-faded: rgba(37, 37, 37, 0.6);
+  --color-neutral-700:  #42413e;
+  --color-neutral-600:  #5e5d58;
+  --color-neutral-500:  #797872;
+  --color-neutral-400:  #95948c;
+  --color-neutral-300:  #b0afa6;
+  --color-neutral-300-light: rgba(185, 184, 174, 0.2);
+  --color-neutral-200:  #cccbbf;
+  --color-neutral-100:  #e7e6d9;
+  --color-neutral-0:    #ffffff;
+
+  /* Ultraviolet scale */
+  --color-ultraviolet-100: #e0d7fd;
+  --color-ultraviolet-200: #c0affb;
+  --color-ultraviolet-300: #a186f8;
+  --color-ultraviolet-400: #815ef6;
+  --color-ultraviolet-500: #6236f4;
+  --color-ultraviolet-600: #4e2bc3;
+  --color-ultraviolet-700: #3b2092;
+  --color-ultraviolet-800: #271662;
+  --color-ultraviolet-900: #140b31;
+
+  /* Semantic aliases */
+  --color-shell:      var(--color-neutral-100);   /* #e7e6d9 */
+  --color-terminal:   var(--color-neutral-900);   /* #0b0b0b */
+  --color-ultraviolet: var(--color-ultraviolet-500); /* #6236f4 */
+
+  --color-background:       var(--color-terminal);
+  --color-background-gray:  var(--color-neutral-800);
+  --color-background-light: var(--color-shell);
+  --color-background-brand: var(--color-ultraviolet);
+
+  --color-text-primary:      var(--color-shell);
+  --color-text-secondary:    var(--color-neutral-300);
+  --color-text-primary-dark: var(--color-terminal);
+
+  --color-button-primary-background:        var(--color-shell);
+  --color-button-primary-text:              var(--color-terminal);
+  --color-button-secondary-background:      var(--color-ultraviolet);
+  --color-button-secondary-background-hover: var(--color-ultraviolet-400);
+  --color-button-secondary-text:            var(--color-shell);
+
+  /* Pixel font (not in @theme — only used via CSS selectors) */
+  --font-pixel: "apkarchivr21", monospace;
+
+  /* Spacing */
+  --space-0:       0;
+  --space-4xs:     5px;
+  --space-3xs:     10px;
+  --space-2xs:     20px;
+  --space-xs:      40px;
+  --space-regular: 48px;
+  --space-sm:      60px;
+  --space-md:      80px;
+  --space-lg:      100px;
+  --space-xl:      160px;
+  --space-2xl:     240px;
+
+  /* RGB chromatic aberration shadows */
+  --box-shadow-rgb:  0 0.99px 0 0 #ff0, 0.99px 0 0 0 #0ff, 1.98px 0.99px 0 0 #0f0, 0 -0.99px 0 0 #00f, -0.99px 0 0 0 #f0f, -1.98px 0 0 0 #f00;
+  --text-shadow-rgb: 0 0.99px 0 #ff0, 0.99px 0 0 #0ff, 1.98px 0.99px 0 #0f0, 0 -0.99px 0 #00f, -0.99px 0 0 #f0f, -1.98px 0 0 #f00;
+
+  /* Transitions */
+  --transition-snappy: 0.1s cubic-bezier(0.6, 0, 0.4, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+/* Retina — halve shadow offsets */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  :root {
+    --box-shadow-rgb:  0 0.5px 0 0 #ff0, 0.5px 0 0 0 #0ff, 1px 0.5px 0 0 #0f0, 0 -0.5px 0 0 #00f, -0.5px 0 0 0 #f0f, -1px 0 0 0 #f00;
+    --text-shadow-rgb: 0 0.5px 0 #ff0, 0.5px 0 0 #0ff, 1px 0.5px 0 #0f0, 0 -0.5px 0 #00f, -0.5px 0 0 #f0f, -1px 0 0 #f00;
+  }
+}
+
+/* ============================================================
+   Base — html / body
+   ============================================================ */
+
+html {
+  interpolate-size: allow-keywords;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--color-text-secondary);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* ============================================================
+   Layout utilities
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: 1398px;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.pt-xl {
+  padding-top: clamp(var(--space-lg), 12vw, var(--space-xl));
+}
+
+.pb-xl {
+  padding-bottom: clamp(var(--space-lg), 12vw, var(--space-xl));
+}
+
+.module-comp {
+  position: relative;
+  background-color: var(--color-background);
+}
+
+/* ============================================================
+   Hero section — layout (dual min-height for dvh support)
+   ============================================================ */
+
+.homeHero {
+  min-height: calc(100vh  - 100px);
+  min-height: calc(100dvh - 100px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ============================================================
+   Hero heading — responsive size scale
+   ============================================================ */
+
+.h1-large {
+  font-family: var(--font-sans);
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  position: relative;
+}
+
+@media (min-width: 480px)  { .h1-large { font-size: 3rem;      } }
+@media (min-width: 768px)  { .h1-large { font-size: 4.5rem;    } }
+@media (min-width: 1024px) { .h1-large { font-size: 6rem;      } }
+@media (min-width: 1280px) { .h1-large { font-size: 7.315rem;  } }
+
+/* ============================================================
+   h1 font-swap animation targets
+   ============================================================ */
+
+h1 span[data-variant="pixel"] {
+  font-family: var(--font-pixel);
+  font-weight: 500;
+  color: var(--color-shell);
+  text-shadow: var(--text-shadow-rgb);
+  mix-blend-mode: difference;
+}
+
+h1 span[data-variant="highlight"] {
+  color: transparent;
+  background-color: var(--color-shell);
+  display: inline-block;
+  box-shadow: var(--box-shadow-rgb);
+  mix-blend-mode: screen;
+}
+
+/* Hero pixel span — absolute overlay, inherit h1 font-size */
+#section-home-hero h1 span[data-variant="pixel"] {
+  font-size: inherit;
+}
+
+/* Hide original letter whenever pixel overlay is active (phase1 + phase2) */
+h1 span:has(> span[data-variant="pixel"]) > span:first-child {
+  visibility: hidden;
+}
