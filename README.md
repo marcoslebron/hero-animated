@@ -2,7 +2,7 @@
 
 A pixel-faithful clone of the [Lambda.ai](https://lambda.ai) homepage hero section, built with Next.js 16, React 19, and Tailwind CSS 4.
 
-**Live demo:** [your-vercel-url.vercel.app]
+**Live demo:** [[your-vercel-url.vercel.app](https://project-jcsvl.vercel.app/)]
 
 ## What's inside
 
